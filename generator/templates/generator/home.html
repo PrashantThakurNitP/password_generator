@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<!this line of code import bootstrap into our project>
+<!only by importing this our webpage look better with buttom and link and spacing>
+<div class="container text-center">
+			<h2 class="alert alert-success">PASSWORD GENERATOR APPLICATION</h2>
+			<br>
+			
+			<br>
+			<h2>Enter Details</h2>
+			<br>
+			<form action="{% url 'password' %}"> <!action specify where to go it means go to website with name password ie generatepassword.html>
+				<select name="length">
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12" selected="selected">12</option><! by selected we specify by default length of password that apper first>
+					<option value="13">13</option>
+					<option value="14">14</option>
+
+				</select>    Length
+				<br>
+				<input type="checkbox" name="special character" > Special character
+				<br>
+				<input type="checkbox" name="Number" > Number
+				<br>
+				<input type="checkbox" name="Uppercase" >Uppercase
+				<br>
+
+			<input type="submit" name="Generate password" value="Generate password" class="btn btn-primary">
+
+			</form>
+			<a href="{% url 'preface' %}" class="btn btn-warning">KNOW MORE</a>
+
+</div> <!putting all things in div>
+
+<!we want to wrap all things inside container ie div tag
+<!div tag is way to organise code>
